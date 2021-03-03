@@ -1,8 +1,8 @@
 # <u>NLP: Twitter Sentiment Analysis</u>
 
-## Course Objectives
+## <u>Course Objectives</u>
 
-In this course, we are going to focus on the following learning objectives:
+### <u>In this course, we are going to focus on the following learning objectives:</u>
 
     1. Apply python libraries to import and visualize datasets
     2. Perform exploratory data analysis and plot word-cloud
@@ -25,7 +25,7 @@ In this course, we are going to focus on the following learning objectives:
 
 ## Project Structure
 
-<b> The hands on project on Twitter Sentiment Analysis is divided into following tasks:</b>
+### <u>The hands on project on Twitter Sentiment Analysis is divided into following tasks: </u>
 
 Task #1: Understand the Problem Statement and business case 
 Task #2: Import libraries and datasets
