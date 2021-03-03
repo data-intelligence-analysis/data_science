@@ -1,6 +1,6 @@
 # <u>NLP: Twitter Sentiment Analysis</u>
 
-##Course Objectives
+## Course Objectives
 
 In this course, we are going to focus on the following learning objectives:
 
@@ -15,17 +15,17 @@ In this course, we are going to focus on the following learning objectives:
     9. Evaluate the performance of trained Naïve Bayes Classifier model using confusion matrices
 
       
-Course Structure
+## Course Structure
 
-This course is divided into 3 parts:
+<b><u>This course is divided into 3 parts:</u></b>
 
-    Project Overview: This introductory reading material will walk you through the project.
-    NLP: Twitter Sentiment Analysis: This is the hands on project that we will work on in Rhyme.
+    <b>Project Overview:</b> This introductory reading material will walk you through the project.
+    <b>NLP: Twitter Sentiment Analysis:</b> This is the hands on project that we will work on in Rhyme.
     Graded Quiz: This is the final assignment that you need to pass in order to finish the course successfully.
 
-Project Structure
+## Project Structure
 
-The hands on project on Twitter Sentiment Analysis is divided into following tasks:
+<b> The hands on project on Twitter Sentiment Analysis is divided into following tasks:</b>
 
 Task #1: Understand the Problem Statement and business case 
 Task #2: Import libraries and datasets
