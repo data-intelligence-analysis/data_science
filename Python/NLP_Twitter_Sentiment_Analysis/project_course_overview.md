@@ -17,10 +17,10 @@ In this course, we are going to focus on the following learning objectives:
       
 ## Course Structure
 
-<b><u>This course is divided into 3 parts:</u></b>
+### <u>This course is divided into 3 parts:</u>
 
-    <b>Project Overview:</b> This introductory reading material will walk you through the project.
-    <b>NLP: Twitter Sentiment Analysis:</b> This is the hands on project that we will work on in Rhyme.
+    Project Overview: This introductory reading material will walk you through the project.
+    NLP: Twitter Sentiment Analysis: This is the hands on project that we will work on in Rhyme.
     Graded Quiz: This is the final assignment that you need to pass in order to finish the course successfully.
 
 ## Project Structure
