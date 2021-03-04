@@ -197,5 +197,108 @@ plt.imshow(WordCloud().generate(negative_sentences_as_one_string))
 		    
 #PERFORM DATA CLEANING - REMOVE DATA PUNCTUATION FROM TEXT
 
-		 
+import string
+string.punctuation
+#test striing
+Test = 'Good morning beautiful people :)... I am having fun learning Machine learning and AI!!'
+#Remove Puntuations from string using list comprehension
+test_punc_removed = [ char for char in Test if char not in string.punctuation ]
+
+test_punc_removed 
+['G',
+ 'o',
+ 'o',
+ 'd',
+ ' ',
+ 'm',
+ 'o',
+ 'r',
+ 'n',
+ 'i',
+ 'n',
+ 'g',
+ ' ',
+ 'b',
+ 'e',
+ 'a',
+ 'u',
+ 't',
+ 'i',
+ 'f',
+ 'u',
+ 'l',
+ ' ',
+ 'p',
+ 'e',
+ 'o',
+ 'p',
+ 'l',
+ 'e',
+ ' ',
+ ' ',
+ 'I',
+ ' ',
+ 'a',
+ 'm',
+ ' ',
+ 'h',
+ 'a',
+ 'v',
+ 'i',
+ 'n',
+ 'g',
+ ' ',
+ 'f',
+ 'u',
+ 'n',
+ ' ',
+ 'l',
+ 'e',
+ 'a',
+ 'r',
+ 'n',
+ 'i',
+ 'n',
+ 'g',
+ ' ',
+ 'M',
+ 'a',
+ 'c',
+ 'h',
+ 'i',
+ 'n',
+ 'e',
+ ' ',
+ 'l',
+ 'e',
+ 'a',
+ 'r',
+ 'n',
+ 'i',
+ 'n',
+ 'g',
+ ' ',
+ 'a',
+ 'n',
+ 'd',
+ ' ',
+ 'A',
+ 'I']
+
+# Use join to create the string
+test_punc_removed_joined = ' '.join(test_punc_removed)
+test_punc_removed_joined
 		    
+#Remove punctuations using a different method
+import string
+punc = string.punctuation
+string_list = []
+for char in Test:
+    if char not in punc:
+        string_list.append(char)
+        string_join = ' '.join(string_list)
+print (string_join)
+		    
+#Answer: G o o d   m o r n i n g   b e a u t i f u l   p e o p l e     I   a m   h a v i n g   f u n   l e a r n i n g   M a c h i n e   l e a r n i n g   a n d   A I
+
+## PERFORM DATA CLEANING - REMOVE STOPWORDS
