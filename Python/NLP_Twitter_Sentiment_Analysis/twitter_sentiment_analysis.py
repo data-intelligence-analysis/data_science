@@ -7,7 +7,8 @@ jtplot.style(theme='monokai', context='notebook', ticks=True, grid=False)
 # setting the style of the notebook to monokai theme
 # this line of code is important so that we can see the x and y axis clearly
 # if you don't run this code line, you will notice that the xlabel and the ylabel on my plot is black on black and it will
-             
+
+## Import libraries and dataset 
 # Load the data
 tweets_df = pd.read_csv('twitter.csv')
 
@@ -41,5 +42,31 @@ tweet_df.describe()
 #75%	23971.750000	0.000000
 #max	31962.000000	1.000000
 
+#display the tweets in the tweet column
+tweet_df['tweet']
 
-             
+#display the id in the id column
+tweet_df['id']
+
+#drop the 'id' column from the DataFrame. 
+#ensoure that the column has been successfully dropped.
+tweets_df = tweets_df.drop(['id'], axis = 1) #axis = 1 means you drop the whole column
+#print out new dataFrame
+tweets_df
+
+#	label	tweet
+#0	0	@user when a father is dysfunctional and is s...
+#1	0	@user @user thanks for #lyft credit i can't us...
+#2	0	bihday your majesty
+#3	0	#model i love u take with u all the time in ...
+#4	0	factsguide: society now #motivation
+#...	...	...
+#31957	0	ate @user isz that youuu?Ã°??ÂÃ°??ÂÃ°??ÂÃ°??ÂÃ°??ÂÃ°...
+#31958	0	to see nina turner on the airwaves trying to...
+#1959	0	listening to sad songs on a monday morning otw...
+#31960	1	@user #sikh #temple vandalised in in #calgary,...
+#31961	0	thank you @user for you follow
+
+
+## Task #3: Explore Dataset 
+
