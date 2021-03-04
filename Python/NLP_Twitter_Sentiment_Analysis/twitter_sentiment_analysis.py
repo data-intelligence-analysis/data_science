@@ -176,3 +176,26 @@ plt.figure(figsize=(20,20))
 #generate the WordCloud visual using the sentences_as_one_string as a parameter
 plt.imshow(WordCloud().generate(sentences_as_one_string))
 	   
+		    
+## Plot the wordcloud of the "negative" dataframe
+# Print negative tweets		   
+negative
+# convert negative sentences to a list 
+sentences_negative = negative['tweet'].tolist()
+# print negative sentences in a list form
+sentences_negative
+# join stences as one string
+negative_sentences_as_one_string = ' '.join(sentences_negative)
+# print negative sentences as a string
+negative_sentences_as_one_string
+# word cloud visual of the negative sentences / sentiments
+plt.figure(figsize=(20,30))
+plt.imshow(WordCloud().generate(negative_sentences_as_one_string))
+		    
+##What do you notice? Does the data make sense?
+##Yes. There are more negative words like hate, racist etc.
+		    
+#PERFORM DATA CLEANING - REMOVE DATA PUNCTUATION FROM TEXT
+
+		 
+		    
