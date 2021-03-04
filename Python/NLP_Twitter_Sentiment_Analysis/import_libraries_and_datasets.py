@@ -31,7 +31,7 @@ tweets_df.info()
 #Statistical forms of the data
 tweet_df.describe()
 
-	#             id	label
+	#        id	label
 #count	31962.000000	31962.000000
 #mean	15981.500000	0.070146
 #std	9226.778988	0.255397
