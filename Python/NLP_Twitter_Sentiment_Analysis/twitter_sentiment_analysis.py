@@ -66,7 +66,20 @@ tweets_df
 #1959	0	listening to sad songs on a monday morning otw...
 #31960	1	@user #sikh #temple vandalised in in #calgary,...
 #31961	0	thank you @user for you follow
-
+#31962 tweets = 2 columns
 
 ## Task #3: Explore Dataset 
+#Using seaboard to plot heatmap to check and remove null values - the method / function isnull() checks for null values and returns true if present and false if not
+sns.heatmap(tweets_df.isnull(), yticklables = False, cbar = False, cmap="Blues")
+#There are no null values
+
+#plot histogram
+tweets_df.hist(bins = 30, figsize = (13,5), color = 'r')
+
+# https://seaborn.pydata.org/generated/seaborn.countplot.html
+# https://matplotlib.org/2.0.2/api/colors_api.html
+#plot a similar figure using seaborn countplot
+#sns.countplot(x="label", data=tweets_df, color='red')
+label_data = twitter_df["label"]
+sns.countplot(label_data, label='Count') # or sns.countplot(twitter_df["label"], label='Count')
 
