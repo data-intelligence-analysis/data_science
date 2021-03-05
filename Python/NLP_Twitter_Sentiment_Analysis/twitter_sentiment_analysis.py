@@ -394,3 +394,7 @@ print(tweet_clean_df[5])
 				    
 #show the original version
 print(tweet_df["tweet"][5])
+
+from sklearn.feature_extraction.test import CountVectorizer
+#define the cleaning process 
+vectorizer = CountVectorizer(analyzer = message_cleaning)
