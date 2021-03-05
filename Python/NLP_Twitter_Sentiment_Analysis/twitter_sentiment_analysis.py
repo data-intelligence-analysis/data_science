@@ -286,7 +286,7 @@ test_punc_removed
  'I']
 
 # Use join to create the string
-test_punc_removed_joined = ' '.join(test_punc_removed)
+test_punc_removed_joined = ''.join(test_punc_removed)
 test_punc_removed_joined
 		    
 #Remove punctuations using a different method
@@ -296,9 +296,64 @@ string_list = []
 for char in Test:
     if char not in punc:
         string_list.append(char)
-        string_join = ' '.join(string_list)
+        string_join = ''.join(string_list)
 print (string_join)
 		    
 #Answer: G o o d   m o r n i n g   b e a u t i f u l   p e o p l e     I   a m   h a v i n g   f u n   l e a r n i n g   M a c h i n e   l e a r n i n g   a n d   A I
+'''
+import string
+punc = string.punctuation
+string_list = []
+for char in Test:
+    if char not in punc:
+        string_list.append(char)
 
+string_join = ''.join(string_list)
+string_join''' - #alternative solution
+# Answer: 'G o o d   m o r n i n g   b e a u t i f u l   p e o p l e     I   a m   h a v i n g   f u n   l e a r n i n g   M a c h i n e   l e a r n i n g   a n d   A I'
+		    
 ## PERFORM DATA CLEANING - REMOVE STOPWORDS
+import nltk # Natural Language tool kit
+
+nltk.download('stopwords')
+
+#you have to donwload stopwords Package to execute this command		    
+from nltk.corpus import stopwords
+stopwords.words('english')
+
+#List comprehension 
+test_punc_removed_join_clean = [word for word in test_punc_removed_join.split() if word.lower() not in stopwords.words('english')
+
+test_punc_removed_join_clean
+			
+
+#For the following text, create a pipeline to remove punctuations followed by removing stopwords
+
+mini_challenge = "Here is a mini challenge, that will teach you how to remove stopwords and puctuations"
+#List comprehension
+mini_challenge_remove_punc = [char for char in mini_challenge if char not in string.punctuations]
+#Join elements of list as string 
+mini_challenge_remove_punc_join = ''.join(mini_challenge_remove_punc)
+#remove stopwords and punctuations
+mini_challenge_remove_punc_join_clean = [word for word in mini_challenge_remove_punc_join if word.lower not in stopwords.words('english')]
+mini_challenge_remove_punc_join_clean
+				
+#['mini', 'challenge', 'teach', 'remove', 'stopwords', 'punctuations']
+
+# PERFORM COUNT VECTORIZATION (TOKENIZATION)
+from sklearn.feature_extraction.text import CountVectorizer
+sample_data = ['This is the first paper.','This paper is the second paper.','And this is the third one.','Is this the first paper?']
+
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(sample_data)
+
+print(vectorizer.get_feature_names())
+#answer ['and','first','is','one','paper','second','the','third','this']
+				
+print(X.toarray())
+'''
+[[0 1 1 0 1 0 1 0 1]
+ [0 0 1 0 2 1 1 0 1]
+ [1 0 1 1 0 0 1 1 1]
+ [0 1 1 0 1 0 1 0 1]]
+ '''
