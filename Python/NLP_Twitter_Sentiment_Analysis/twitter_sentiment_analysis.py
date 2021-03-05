@@ -398,3 +398,11 @@ print(tweet_df["tweet"][5])
 from sklearn.feature_extraction.test import CountVectorizer
 #define the cleaning process 
 vectorizer = CountVectorizer(analyzer = message_cleaning)
+tweets_countervectorizer = CountVectorizer(analyze = message_cleaning, dtype = 'unit8').fit_transformer(tweets_df['tweet']).toarray()
+tweets_countervectorizer.shape()
+#(31962, 47386)
+X = tweets_countervectorizer
+y = tweets_df['label']
+				    
+				    
+## UNDERSTAND THE CONCEPTS BEHIND THE THEORY AND INTUITION BEHIND NAIVE BAYES CLASSIFIER
