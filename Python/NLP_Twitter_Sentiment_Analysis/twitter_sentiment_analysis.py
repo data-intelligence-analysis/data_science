@@ -281,7 +281,7 @@ test_punc_removed
  'a',
  'n',
  'd',
- ' ',
+  ' ',
  'A',
  'I']
 
@@ -338,17 +338,19 @@ mini_challenge_remove_punc_join = ''.join(mini_challenge_remove_punc)
 mini_challenge_remove_punc_join_clean = [word for word in mini_challenge_remove_punc_join if word.lower not in stopwords.words('english')]
 mini_challenge_remove_punc_join_clean
 				
-#['mini', 'challenge', 'teach', 'remove', 'stopwords', 'punctuations']
+# output = ['mini', 'challenge', 'teach', 'remove', 'stopwords', 'punctuations']
 
 # PERFORM COUNT VECTORIZATION (TOKENIZATION)
 from sklearn.feature_extraction.text import CountVectorizer
 sample_data = ['This is the first paper.','This paper is the second paper.','And this is the third one.','Is this the first paper?']
 
+#count vectorizer function
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(sample_data)
 
+# get the unique names in the data				
 print(vectorizer.get_feature_names())
-#answer ['and','first','is','one','paper','second','the','third','this']
+#output = ['and','first','is','one','paper','second','the','third','this']
 				
 print(X.toarray())
 '''
@@ -357,3 +359,38 @@ print(X.toarray())
  [1 0 1 1 0 0 1 1 1]
  [0 1 1 0 1 0 1 0 1]]
  '''
+mini_challenge = ['Hello World',
+		  'Hello Hello World',
+		  'Hello World world world']
+#y= vectorizer.fit_transform(mini_challenge)
+'''output = [[1,1]
+	    [2,1]
+	    [1,3]]'''
+
+
+
+y = vectorizer.fit_transform(mini_challenge)
+print(vectorizer.get_feature_names)
+#output = ['hello', 'world']
+print(y.toarray())
+'''output = [[1,1]
+	    [2,1]
+	    [1,3]]'''
+				
+## CREATE A PIPELINE TO REMOVE PUNCTUATIONS, STOPWORDS AND PERFORM COUNT VECTORIZATION
+#Lets define a function to remove and clean up all the messages
+# The function removes punctuations and stopwords
+def message_cleaning(message):
+    test_punc_removed = [ char for char in message if char not in string.punctuation ]
+    test_punc_removed_join = ''.join(test_punc_removed)
+    test_punc_removed_join_split = test_punc_removed_join.split()
+    test_punc_removed_join_clean = [word for word in test_punc_removed_join_split if word.lower() not in stopwords.words('english')
+    return test_punc_removed_join_clean
+				    
+#Aplly the message cleaning function to the existing tweets in the file
+tweets_clean_df = tweets_df['tweet'].apply(test_punc_removed_join_clean)
+#show the cleaned up version 
+print(tweet_clean_df[5])
+				    
+#show the original version
+print(tweet_df["tweet"][5])
