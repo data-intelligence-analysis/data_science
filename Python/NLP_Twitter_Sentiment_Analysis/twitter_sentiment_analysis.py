@@ -389,7 +389,7 @@ def message_cleaning(message):
 				    
 #Aplly the message cleaning function to the existing tweets in the file
 tweets_clean_df = tweets_df['tweet'].apply(test_punc_removed_join_clean)
-#show the cleaned up version 
+#show the cleaned up version at index 5
 print(tweet_clean_df[5])
 				    
 #show the original version
