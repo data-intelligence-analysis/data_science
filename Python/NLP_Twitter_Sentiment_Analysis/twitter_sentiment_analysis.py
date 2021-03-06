@@ -406,3 +406,10 @@ y = tweets_df['label']
 				    
 				    
 ## UNDERSTAND THE CONCEPTS BEHIND THE THEORY AND INTUITION BEHIND NAIVE BAYES CLASSIFIER
+
+#Mini Challenge - Naive Bayes: Quiz/Calculate the probability of non-retiring (RED CLASS)
+				    
+#P(No Retire|x) = (P(X|No Retire) * P(No Retire))/P(X)
+# P(X|No Retire) = 1/20
+# P(No Retire) = 20/60
+# P(X) = 4/60
