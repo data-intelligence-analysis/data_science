@@ -409,7 +409,18 @@ y = tweets_df['label']
 
 #Mini Challenge - Naive Bayes: Quiz/Calculate the probability of non-retiring (RED CLASS)
 				    
-#P(No Retire|x) = (P(X|No Retire) * P(No Retire))/P(X)
-# P(X|No Retire) = 1/20
-# P(No Retire) = 20/60
-# P(X) = 4/60
+#P(No Retire|x) = (P(X|No Retire) * P(No Retire))/P(X)  = 1 - P(Retiring|x) = 1 - 0.25 = 0.75
+# P(X|No Retire) (# of No Retiring/Total Points) = 3/20
+# P(No Retire) (# of similar observations for no retiring / Total # no retiring) = 20/60 = 1/3
+# P(X) (# of similar observations / total # points = 4/60
+# P(No Retire|x) = (3/20 * 1/3)/1/15 = 15/20 = 0.75
+				    
+#Task #10: TRAIN A NAIVE BAYES CLASSIFIER MODEL
+#tokenization of all the tweets
+X.shape
+#(31962, 47386)
+#All the sentiments of zeroes (0) and one's (1)
+y.shape
+#(31962,)
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split
