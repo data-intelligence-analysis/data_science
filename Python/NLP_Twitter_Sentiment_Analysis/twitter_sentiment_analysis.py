@@ -442,7 +442,7 @@ print(classification_report(y_test, y_predict_test)
       
 
 #Mini challenge - retrain and reassess the model using a different type of classifier such as a logistic regression classifier
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression #https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
 log_reg = LogisticRegression(random_state=0).fit(X_train, y_train)
 from sklearn.matrics import classification_report, confusion_matrix
 #Predicting the Test set results
