@@ -319,7 +319,7 @@ nltk.download('stopwords')
 
 #you have to donwload stopwords Package to execute this command		    
 from nltk.corpus import stopwords
-stopwords.words('english')
+stopwords.words('english') - # https://www.geeksforgeeks.org/removing-stop-words-nltk-python/
 
 #List comprehension 
 test_punc_removed_join_clean = [word for word in test_punc_removed_join.split() if word.lower() not in stopwords.words('english')
@@ -388,7 +388,7 @@ def message_cleaning(message):
     return test_punc_removed_join_clean
 				    
 #Aplly the message cleaning function to the existing tweets in the file
-tweets_clean_df = tweets_df['tweet'].apply(test_punc_removed_join_clean)
+tweets_clean_df = tweets_df['tweet'].apply(message_cleaning)
 #show the cleaned up version at index 5
 print(tweet_clean_df[5])
 				    
@@ -423,4 +423,29 @@ X.shape
 y.shape
 #(31962,)
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
+
+from sklearn.naive_bayes import MultinomialNB
+NB_classifier = MultinomialNB()
+NB_classifier.fit(X_train, y_train)
+#MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+
+#Assess Trained Model Performance
+from sklearn.matrics import classification_report, confusion_matrix
+#Predicting the Test set results
+y_predict_test = NM_classifier.predict(X_test)
+cm = confusion_matrix(y_test, y_predict_test)
+sns.heatmap(cm, annot = True)
+#<matplotlib.axes._subplots.AxesSubplot at 0x1dc38033288>
+
+print(classification_report(y_test, y_predict_test)
+      
+
+#Mini challenge - retrain and reassess the model using a different type of classifier such as a logistic regression classifier
+from sklearn.linear_model import LogisticRegression
+log_reg = LogisticRegression(random_state=0).fit(X_train, y_train)
+from sklearn.matrics import classification_report, confusion_matrix
+#Predicting the Test set results
+y_predict_log_test = log_reg.predict(X_test)
+cm = confusion_matrix(y_test, y_predict_log_test)
+sns.heatmap(cm, annot = True)
