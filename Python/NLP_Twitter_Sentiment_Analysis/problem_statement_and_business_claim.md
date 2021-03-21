@@ -9,4 +9,4 @@
   
   <u>Tweet</u>                                                                                                <u>Sentiment</u>
   "Good Morning everyone! Such a beautiful day"                    -> (SENTIMENT ANALYSIS NLP MODEL) ->       POSITIVE(LABEL = 0)
-  "Don't fly an xx airline their customer service is horrendous"   -> (SENTIMENT ANALYSIS NLP MODEL) ->       NEGATIVE(LABEL = 0)
+  "Don't fly an xx airline their customer service is horrendous"   -> (SENTIMENT ANALYSIS NLP MODEL) ->       NEGATIVE(LABEL = 1)
