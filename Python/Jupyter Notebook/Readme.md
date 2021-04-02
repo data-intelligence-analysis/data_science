@@ -1,1 +1,1 @@
-Data Analysis on a Database of movies and their respective details.
+Data Analysis on a dataset of movies and their respective details.
