@@ -1,19 +1,12 @@
 # Objectives
-## In this course, we are going to focus on three learning objectives:
+## We are going to focus on three learning objectives:
 
     1. Selecting a Region of Interest and Extract Features from it, so it will be your Training Dataset.
     2. Getting Introduced to Several Numpy Functions.
     3. Label the Training Dataset.
 
-## By the end of this course, you will be able to Create Training Dataset and Label it.
+## By the end of this project, I should be able to Create a Training Dataset and Label it.
 
-# Course Structure
-
-## This course is divided into 3 parts:
-
-    1. Course Overview: This introductory reading material.
-    2. Preparing Data for Machine Learning Models: This is the hands on project that we will work on in Rhyme.
-    3. Graded Quiz: This is the final assignment that you need to pass in order to finish the course successfully.
 
 # Project Structure
 
