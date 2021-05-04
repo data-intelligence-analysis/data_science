@@ -4,11 +4,16 @@ import matplotlib.pyplot as plt
 
 
 ###Final Data Preprocessing
+'''Preparing an unorganized data set to feed the machine learning models in an unbiased way so that the model can give good results, for example we don't want the machine learning model to know that 
+1st 50 records always go to the object, and the next 80 records will always go to the background and so on. So we have to mix it up for the model to learn'''
+## Create a shuffling function
 def shuffle(features,labels):
     arr=np.random.permutation(features.shape[0])
     features_shuffled = features[arr, :]
     shuffled_labels=labels[arr]
+    ###Shuffling every record of the feature
     print("Features Shuffled Array Size:",features_shuffled.shape)
+    #Shuffle the corresponding lable size
     print("Labels Shuffled Array Size:", shuffled_labels.shape)
     print("Shuffled Array labels Content", shuffled_labels)
     
