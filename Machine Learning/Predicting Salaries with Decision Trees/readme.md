@@ -30,3 +30,15 @@ Task 3: Split our dataset into training and testing sets
 Task 4: Fit a decision tree to a dataset and make predictions
 Task 5: Prune a decision tree to improve its accuracy
 Task 6: Generate a graphical representation of a decision tree
+
+
+# Decision Trees
+
+## Now we will build a decision tree and use it to predict salaries. We will accomplish this by completing each task in the project:
+
+    Task 1: Load a dataset from file
+    Task 2: Process a dataset so that it can be modelled
+    Task 3: Split our dataset into training and testing sets
+    Task 4: Fit a decision tree to a dataset and make predictions
+    Task 5: Prune a decision tree to improve its accuracy
+    Task 6: Generate a graphical representation of a decision tree
