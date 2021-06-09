@@ -15,11 +15,11 @@ You will be able to generate a visualization of a decision tree and explain how 
 
 # Project Structure
 
-## This course is divided into 3 parts:
+## This project is divided into 3 parts:
 
-    Course Overview: This introductory reading material.
+    Project Overview: This introductory reading material.
     Decision Trees: This is the hands on project that we will work on in Rhyme.
-    Graded Quiz: This is the final assignment that you need to pass in order to finish the course successfully.
+    
 
 Structure
 
