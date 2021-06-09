@@ -1,7 +1,7 @@
 
-# Course Objectives
+# Project Objectives
 
-## In this course, we are going to focus on five learning objectives:
+## In this project, we are going to focus on five learning objectives:
 
     By the end of task 1, you will be able to load a dataset from file.
     By the end of task 2, you will be able to process a dataset so that it can be modelled.
@@ -10,10 +10,10 @@
     By the end of task 5, you will be able to prune a decision tree to improve its accuracy.
     By the end of task 6, you will be able to generate a graphical representation of a decision tree.
 
-By the end of this course, you will be able to model an existing dataset with the goal of making predictions about new data.  
+By the end of this project, you will be able to model an existing dataset with the goal of making predictions about new data.  
 You will be able to generate a visualization of a decision tree and explain how it makes predictions.
 
-# Course Structure
+# Project Structure
 
 ## This course is divided into 3 parts:
 
@@ -21,7 +21,7 @@ You will be able to generate a visualization of a decision tree and explain how 
     Decision Trees: This is the hands on project that we will work on in Rhyme.
     Graded Quiz: This is the final assignment that you need to pass in order to finish the course successfully.
 
-Project Structure
+Structure
 
 The hands on project on Predicting Salaries with Decision Trees is divided into following tasks:
 Task 1: Load a dataset from file
